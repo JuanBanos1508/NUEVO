@@ -377,7 +377,7 @@ export default function WorkNowLanding() {
           </CardHeader>
           <CardContent className="p-0">
             <div className="mb-2">
-              <span className="text-5xl font-bold text-[#1c0b35]">$90.000</span>
+              <span className="text-5xl font-bold text-[#1c0b35]">$80.000</span>
             </div>
             <p className="text-sm font-semibold text-[#A463F2] mb-6">
               Precio especial para los primeros 10 usuarios
