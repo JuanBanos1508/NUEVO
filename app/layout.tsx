@@ -21,12 +21,12 @@ export default function RootLayout({
       <body>
         {children}
 
-        {/* Botón de WhatsApp fijo abajo a la izquierda */}
+        {/* Botón de WhatsApp fijo abajo a la derecha */}
         <a
           href="https://wa.me/5493413650224"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-4 left-4 z-50 bg-[#1C0B35] hover:bg-[#A463F2] text-white rounded-full p-3 shadow-lg flex items-center justify-center"
+          className="fixed bottom-4 right-4 z-50 bg-[#1C0B35] hover:bg-[#A463F2] text-white rounded-full p-3 shadow-lg flex items-center justify-center"
         >
           <FaWhatsapp className="w-6 h-6" />
         </a>
