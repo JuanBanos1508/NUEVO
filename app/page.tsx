@@ -3,15 +3,28 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle, Clock, Eye, FileText, Frown, Mail, Filter, UserCheck, BarChart3 } from "lucide-react"
+import { CheckCircle, Clock, Eye, FileText, Frown, Mail, Filter, UserCheck, BarChart3, XCircle } from "lucide-react"
 import Link from "next/link"
 import TimeCalculator from "@/components/time-calculator"
 import { ShieldCheck } from "lucide-react";
+import { useMemo, useState } from "react";
+
 
 
 
 export default function WorkNowLanding() {
+  const CV_CAP_OPTIONS = [100, 200, 300, 400] as const;
+const PRICE_PER_CV_ARS = 317;
+const SUBSCRIPTION_PRICE_ARS = 130000;
+
+const [cvCap, setCvCap] = useState<(typeof CV_CAP_OPTIONS)[number]>(200);
+
+const formatARS = (value: number) => `AR$ ${value.toLocaleString("es-AR")}`;
+
+const maxToPay = useMemo(() => cvCap * PRICE_PER_CV_ARS, [cvCap]);
+  
   return (
+    
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
@@ -60,21 +73,18 @@ export default function WorkNowLanding() {
         <div className="container mx-auto px-4 lg:px-6">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto space-y-8">
             <div className="space-y-8 text-center items-center flex flex-col">
-              <p className="text-[#1C0B35]font-medium text-lg">
-                ¿Contratar en gastronomía se volvió un dolor de cabeza?
-              </p>
+              
 
              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-  <span className="text-[#1C0B35]">Encontrá al candidato ideal en</span>
-  <span className="mx-2 text-[#A463F2] line-through">semanas</span>
-  <span className="text-[#1C0B35]">minutos</span>
+  <span className="text-[#1C0B35]">Dejá que </span>
+  <span className="mx-2 text-[#A463F2]"> Work Now </span>
+  <span className="block text-[#1C0B35]"> filtre por vos</span>
 </h1>
 
-
-              <p className="text-xl text-[#1C0B35]  leading-relaxed">
-                Dejá de perder tiempo con CVs que no sirven y entrevistas que no llevan a nada. Te conectamos
-                directamente con candidatos listos para trabajar.
-              </p>
+<p className="text-xl text-[#1C0B35] leading-relaxed">
+  <span>No pierdas tiempo con candidatos que no llevan a nada.</span>
+  <span className="block">Con Work Now encontrás a tus próximos candidatos en minutos</span>
+</p>
               <Button
   size="lg"
   asChild
@@ -188,11 +198,10 @@ export default function WorkNowLanding() {
   <div className="container mx-auto px-4 lg:px-6 relative z-10">
     <div className="text-center mb-16">
       <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-        Tu sistema que hace el trabajo pesado por vos
+        Creado para cada etapa de tu contratación
       </h2>
       <p className="text-xl text-white max-w-3xl mx-auto">
-        Desde que llega el primer CV hasta que tenés a los mejores listos para entrevistar, vos solo decidís a quién contratar.
-      </p>
+Analizamos los CVs con IA según tu criterio para que te queden los mejores candidatos. Vos solo decidís a quién contratar.      </p>
     </div>
 
     <div className="space-y-16">
@@ -313,21 +322,134 @@ export default function WorkNowLanding() {
   </div>
 </section>
 
-    {/* Pricing */}
+{/* Otras Alternativas vs Work Now */}
+<section className="py-16 lg:py-24 bg-white">
+  <div className="container mx-auto px-4 lg:px-6">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl lg:text-5xl font-bold text-[#1C0B35]">
+        Adiós al caos del reclutamiento
+      </h2>
+      <p className="text-lg text-gray-600 mt-4">
+        Unificá tu proceso de contratación y potenciá a RR.HH.
+      </p>
+    </div>
+
+    <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+      {/* Izquierda: Otras Alternativas */}
+      <div className="rounded-2xl border-2 border-red-200 bg-red-50 p-8 shadow-sm">
+        <div className="inline-flex items-center rounded-full bg-red-100 text-red-700 px-4 py-1 text-sm font-semibold mb-6">
+          Otras Alternativas
+        </div>
+
+    
+
+        <ul className="space-y-4">
+          <li className="flex items-start gap-3">
+            <XCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+            <span className="text-gray-800">Filtrado genérico, sin tu contexto.</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <XCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+            <span className="text-gray-800">CVs repartidos: portales, mail, WhatsApp, planillas.</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <XCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+            <span className="text-gray-800">Pagas costos fijos o por aviso</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <XCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+            <span className="text-gray-800">Coordinación manual y seguimiento desordenado.</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <XCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+            <span className="text-gray-800">Mensajes uno por uno con cada candidato</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <XCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+            <span className="text-gray-800">Varias herramientas para una sola búsqueda.</span>
+          </li>
+              {/* Imagen: muchas apps */}
+        <div className="mb-6 flex justify-center">
+          <img
+            src="/muchas app.png"
+            alt="Múltiples herramientas para reclutamiento"
+            className="h-40 md:h-44 w-auto object-contain"
+            loading="lazy"
+          />
+        </div>
+        </ul>
+      </div>
+
+      {/* Derecha: Con Work Now */}
+      <div className="rounded-2xl border-2 border-green-200 bg-green-50 p-8 shadow-sm">
+        <div className="inline-flex items-center rounded-full bg-green-100 text-green-700 px-4 py-1 text-sm font-semibold mb-6">
+          Con Work Now
+        </div>
+
+
+        <ul className="space-y-4">
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+            <span className="text-gray-800">Filtrado personalizado con IA según tu criterio.</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+            <span className="text-gray-800">Un solo flujo para manejar la búsqueda.</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+            <span className="text-gray-800">Pagas solo por lo que usas</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+            <span className="text-gray-800">Coordinación automática y panel de entrevista</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+            <span className="text-gray-800">Mensajes automáticos</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+            <span className="text-gray-800">Todo ordenado en un solo lugar.</span>
+          </li>
+            {/* Imagen: app Work Now */}
+        <div className="mb-6 flex justify-center">
+          <img
+            src="/app work now.png"
+            alt="Work Now en una sola app"
+            className="h-40 md:h-44 w-auto object-contain"
+            loading="lazy"
+          />
+        </div>
+        </ul>
+      </div>
+    </div>
+    
+  
+  </div>
+</section>
+
+
+
+
+
+
+
+{/* Pricing */}
 <section id="pricing" className="py-16 lg:py-24">
   <div className="container mx-auto px-4 lg:px-6">
     <div className="text-center mb-16">
-      <h2 className="text-3xl lg:text-5xl font-bold text-[#1c0b35] mb-6">
-        Ahorrá más tiempo del que te cuesta
+      <h2 className="text-3xl lg:text-5xl font-bold text-[#1c0b35] mb-4">
+        Modelo flexible: pagás por lo que usás
       </h2>
     </div>
 
     {/* CONTENEDOR GRIS */}
-    <div className="max-w-5xl mx-auto bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8">
-    <div className="grid lg:grid-cols-2 gap-8 lg:items-center">
-        {/* IZQUIERDA: Items */}
-        <div>
-          <h3 className="text-2xl font-bold text-[#1c0b35] mb-6">
+    <div className="max-w-6xl mx-auto bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:items-stretch">
+        {/* IZQUIERDA: Beneficios */}
+        <div className="lg:col-span-1">
+          <h3 className="text-2xl font-bold text-[#1c0b35] mb-2">
             Accedé directamente a candidatos calificados
           </h3>
           <ul className="space-y-4">
@@ -352,54 +474,114 @@ export default function WorkNowLanding() {
               <span className="text-gray-700">Entrevistas coordinadas automáticamente</span>
             </li>
           </ul>
-          {/* Rectángulo de Garantía (borde verde) */}
-<Card className="mt-6 p-6 border-2 border-green-500 rounded-2xl shadow-md bg-white">
-  <div className="flex items-center gap-3">
-    <ShieldCheck className="w-5 h-5 text-green-600" />
-    <span className="text-lg font-semibold text-[#1c0b35]">Garantía 100%</span>
-  </div>
-</Card>
-
-{/* Texto por fuera del rectángulo */}
-<p className="text-xs text-gray-500 mt-2">
-  Devolución total si no contratás a nadie del shortlist enviado.
-</p>
         </div>
-        
 
-        {/* DERECHA: Tarjeta violeta (más grande y más abajo) */}
-  <Card className="p-10 border-2 border-[#A463F2] shadow-2xl rounded-2xl
-               max-w-md w-full lg:mx-auto lg:self-center flex flex-col">
+        {/* CENTRO: Plan por CV */}
+        <Card className="p-8 border-2 border-[#A463F2] shadow-2xl rounded-2xl w-full h-full flex flex-col">
           <CardHeader className="p-0 mb-6">
             <CardTitle className="text-2xl font-bold text-[#1c0b35]">
-              Valor por Búsqueda
+              Por CV Analizado
             </CardTitle>
           </CardHeader>
-          <CardContent className="p-0">
-            <div className="mb-2">
-              <span className="text-5xl font-bold text-[#1c0b35]">$80.000</span>
+
+          <CardContent className="p-0 flex flex-col flex-1">
+            <div className="flex items-end gap-2 mb-4">
+              <span className="text-4xl lg:text-4xl font-bold text-[#1c0b35] leading-none">
+                {formatARS(PRICE_PER_CV_ARS)}
+              </span>
             </div>
-            <p className="text-sm font-semibold text-[#A463F2] mb-6">
-              Precio especial para los primeros 10 usuarios
+
+            <p className="text-sm text-gray-600 mb-3">Elegí tu tope por búsqueda</p>
+<div className="flex justify-center flex-wrap gap-2 mb-4">
+  {CV_CAP_OPTIONS.map((opt) => (
+    <button
+      key={opt}
+      type="button"
+      onClick={() => setCvCap(opt)}
+      className={[
+        "h-10 px-4 rounded-xl border text-sm font-semibold transition-colors",
+        cvCap === opt
+          ? "bg-[#f3e8ff] border-[#A463F2] text-[#1c0b35]"
+          : "bg-white border-gray-200 text-gray-700 hover:border-[#A463F2]",
+      ].join(" ")}
+      aria-pressed={cvCap === opt}
+    >
+      {opt}
+    </button>
+  ))}
+</div>
+
+            <div className="mb-6 rounded-2xl border border-[#e9d5ff] bg-[#faf5ff] p-4 flex items-center justify-between">
+              <span className="text-sm font-semibold text-[#1c0b35]">Máximo a pagar:</span>
+              <span className="text-sm font-bold text-[#6d28d9]">{formatARS(maxToPay)}</span>
+            </div>
+
+            {/* Empuja el botón abajo para igualar alturas */}
+            <div className="mt-auto">
+              <Button
+                asChild
+                className="w-full bg-[#1C0B35] hover:bg-[#A463F2] text-white font-semibold rounded-xl py-3 shadow-md"
+              >
+                <a href="https://tally.so/r/nPW5d1" target="_blank" rel="noopener noreferrer">
+                  Empezar búsqueda
+                </a>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* DERECHA: Suscripción ilimitada */}
+        <Card className="p-8 border-2 border-[#A463F2] shadow-2xl rounded-2xl w-full h-full flex flex-col">
+          <CardHeader className="p-0 mb-6">
+            <CardTitle className="text-2xl font-bold text-[#1c0b35]">
+              Plan Mensual
+            </CardTitle>
+          </CardHeader>
+
+          <CardContent className="p-0 flex flex-col flex-1">
+            <div className="flex items-end gap-2 mb-2">
+              <span className="text-4xl lg:text-4xl font-bold text-[#1c0b35] whitespace-nowrap leading-none">
+                {formatARS(SUBSCRIPTION_PRICE_ARS)}
+              </span>
+            </div>
+
+            <p className="text-sm font-semibold text-[#A463F2] mb-4">
+              Ideal si tenés muchas vacantes
             </p>
 
-            <Button
-              asChild
-              className="w-full bg-[#1C0B35] hover:bg-[#A463F2] text-white font-semibold rounded-xl py-3 shadow-md"
-            >
-              <a href="https://tally.so/r/nPW5d1" target="_blank" rel="noopener noreferrer">
-                Conocer más
-              </a>
-            </Button>
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-start space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                <span className="text-gray-700">CVs ilimitados</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                <span className="text-gray-700">Multi-sucursal</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                <span className="text-gray-700">Historial de candidatos</span>
+              </li>
+            </ul>
 
-         
+            {/* Empuja el botón abajo para igualar alturas */}
+            <div className="mt-auto">
+              <Button
+                asChild
+                className="w-full bg-[#1C0B35] hover:bg-[#A463F2] text-white font-semibold rounded-xl py-3 shadow-md"
+              >
+                <a href="https://tally.so/r/nPW5d1" target="_blank" rel="noopener noreferrer">
+                  Activar suscripción
+                </a>
+              </Button>
+            </div>
           </CardContent>
-          
         </Card>
       </div>
     </div>
   </div>
 </section>
+
 
 
       {/* FAQ */}

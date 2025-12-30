@@ -49,6 +49,7 @@ export default function TimeCalculator() {
             ¿Cuántos CVs recibís?
           </label>
           <input
+          
             type="range"
             min="10"
             max="200"
