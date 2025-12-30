@@ -54,7 +54,7 @@ const maxToPay = useMemo(() => cvCap * PRICE_PER_CV_ARS, [cvCap]);
 
          <Button
   asChild
-  className="bg-[#7C3AED] hover:bg-[#8B5CF6] text-white rounded-xl px-6 shadow-lg"
+  className="bg-[#5B21B6] hover:bg-[#8B5CF6] text-white rounded-xl px-6 shadow-lg"
 >
   <a
     href="https://tally.so/r/nPW5d1"
@@ -87,7 +87,7 @@ const maxToPay = useMemo(() => cvCap * PRICE_PER_CV_ARS, [cvCap]);
               <Button
   size="lg"
   asChild
-  className="bg-[#7C3AED] hover:bg-[#8B5CF6] text-white rounded-xl px-8 py-4 text-lg shadow-lg"
+  className="bg-[#5B21B6] hover:bg-[#8B5CF6] text-white rounded-xl px-8 py-4 text-lg shadow-lg"
 >
   <a
     href="https://tally.so/r/nPW5d1"
@@ -309,14 +309,14 @@ Analizamos los CVs con IA según tu criterio para que te queden los mejores cand
 
     <div className="text-center mt-12">
       <Button
-        size="lg"
-        asChild
-        className="bg-[#7C3AED] hover:bg-[#8B5CF6] text-white rounded-xl px-8 py-4 text-lg shadow-lg"
-      >
-        <a href="https://tally.so/r/nPW5d1" target="_blank" rel="noopener noreferrer">
-          Empezar ahora
-        </a>
-      </Button>
+  size="lg"
+  asChild
+  className="bg-[#5B21B6] hover:bg-[#8D3DE5] text-white rounded-xl px-12 py-6 text-xl shadow-lg"
+>
+  <a href="https://tally.so/r/nPW5d1" target="_blank" rel="noopener noreferrer">
+    Empezar ahora
+  </a>
+</Button>
     </div>
   </div>
 </section>
@@ -491,14 +491,18 @@ Analizamos los CVs con IA según tu criterio para que te queden los mejores cand
             </div>
 
             <p className="text-sm text-gray-600 mb-3">Elegí tu tope por búsqueda</p>
-<div className="flex justify-center flex-wrap gap-2 mb-4">
+
+<div className="flex justify-center flex-wrap gap-2 mb-4 sm:flex-nowrap">
   {CV_CAP_OPTIONS.map((opt) => (
     <button
       key={opt}
       type="button"
       onClick={() => setCvCap(opt)}
       className={[
-        "h-10 px-4 rounded-xl border text-sm font-semibold transition-colors",
+        // ✅ Mobile: más chico
+        "h-9 px-3 text-xs rounded-xl border font-semibold transition-colors",
+        // ✅ Desktop: igual que antes y en una sola línea
+        "sm:h-10 sm:px-5 sm:text-sm",
         cvCap === opt
           ? "bg-[#f3e8ff] border-[#A463F2] text-[#1c0b35]"
           : "bg-white border-gray-200 text-gray-700 hover:border-[#A463F2]",
@@ -519,7 +523,7 @@ Analizamos los CVs con IA según tu criterio para que te queden los mejores cand
             <div className="mt-auto">
               <Button
                 asChild
-                className="w-full bg-[#8B5CF6] hover:bg-[#8B5CF6] text-white font-semibold rounded-xl py-3 shadow-md"
+                className="w-full bg-[#5B21B6] hover:bg-[#8B5CF6] text-white font-semibold rounded-xl py-3 shadow-md"
               >
                 <a href="https://tally.so/r/nPW5d1" target="_blank" rel="noopener noreferrer">
                   Empezar búsqueda
@@ -567,7 +571,7 @@ Analizamos los CVs con IA según tu criterio para que te queden los mejores cand
             <div className="mt-auto">
               <Button
                 asChild
-                className="w-full bg-[#7C3AED] hover:bg-[#8B5CF6] text-white font-semibold rounded-xl py-3 shadow-md"
+                className="w-full bg-[#5B21B6] hover:bg-[#8B5CF6] text-white font-semibold rounded-xl py-3 shadow-md"
               >
                 <a href="https://tally.so/r/nPW5d1" target="_blank" rel="noopener noreferrer">
                   Activar suscripción
@@ -685,7 +689,7 @@ Si estás activo en una búsqueda, tenés prioridad y soporte dedicado para reso
           <Button 
   size="lg"
   asChild
-  className="bg-[#7C3AED] hover:bg-[#8B5CF6] text-white rounded-xl px-8 py-4 text-lg font-semibold shadow-lg"
+  className="bg-[#5B21B6] hover:bg-[#8B5CF6] text-white rounded-xl px-8 py-4 text-lg font-semibold shadow-lg"
 >
   <a
     href="https://tally.so/r/nPW5d1"
