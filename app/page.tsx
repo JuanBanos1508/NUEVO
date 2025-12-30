@@ -54,7 +54,7 @@ const maxToPay = useMemo(() => cvCap * PRICE_PER_CV_ARS, [cvCap]);
 
          <Button
   asChild
-  className="bg-[#1C0B35] hover:bg-[#A463F2] text-white rounded-xl px-6 shadow-lg"
+  className="bg-[#7C3AED] hover:bg-[#8B5CF6] text-white rounded-xl px-6 shadow-lg"
 >
   <a
     href="https://tally.so/r/nPW5d1"
@@ -74,11 +74,10 @@ const maxToPay = useMemo(() => cvCap * PRICE_PER_CV_ARS, [cvCap]);
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto space-y-8">
             <div className="space-y-8 text-center items-center flex flex-col">
               
-
-             <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-  <span className="text-[#1C0B35]">Dejá que </span>
-  <span className="mx-2 text-[#A463F2]"> Work Now </span>
-  <span className="block text-[#1C0B35]"> filtre por vos</span>
+  <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+  <span className="text-[#1C0B35]">Encontrá al candidato ideal en</span>
+  <span className="mx-2 text-[#A463F2] line-through">semanas</span>
+  <span className="text-[#1C0B35]">minutos</span>
 </h1>
 
 <p className="text-xl text-[#1C0B35] leading-relaxed">
@@ -88,7 +87,7 @@ const maxToPay = useMemo(() => cvCap * PRICE_PER_CV_ARS, [cvCap]);
               <Button
   size="lg"
   asChild
-  className="bg-[#1C0B35] hover:bg-[#A463F2] text-white rounded-xl px-8 py-4 text-lg shadow-lg"
+  className="bg-[#7C3AED] hover:bg-[#8B5CF6] text-white rounded-xl px-8 py-4 text-lg shadow-lg"
 >
   <a
     href="https://tally.so/r/nPW5d1"
@@ -312,7 +311,7 @@ Analizamos los CVs con IA según tu criterio para que te queden los mejores cand
       <Button
         size="lg"
         asChild
-        className="bg-[#A463F2] hover:bg-[#8D3DE5] text-white rounded-xl px-8 py-4 text-lg shadow-lg"
+        className="bg-[#7C3AED] hover:bg-[#8B5CF6] text-white rounded-xl px-8 py-4 text-lg shadow-lg"
       >
         <a href="https://tally.so/r/nPW5d1" target="_blank" rel="noopener noreferrer">
           Empezar ahora
@@ -520,7 +519,7 @@ Analizamos los CVs con IA según tu criterio para que te queden los mejores cand
             <div className="mt-auto">
               <Button
                 asChild
-                className="w-full bg-[#1C0B35] hover:bg-[#A463F2] text-white font-semibold rounded-xl py-3 shadow-md"
+                className="w-full bg-[#8B5CF6] hover:bg-[#8B5CF6] text-white font-semibold rounded-xl py-3 shadow-md"
               >
                 <a href="https://tally.so/r/nPW5d1" target="_blank" rel="noopener noreferrer">
                   Empezar búsqueda
@@ -568,7 +567,7 @@ Analizamos los CVs con IA según tu criterio para que te queden los mejores cand
             <div className="mt-auto">
               <Button
                 asChild
-                className="w-full bg-[#1C0B35] hover:bg-[#A463F2] text-white font-semibold rounded-xl py-3 shadow-md"
+                className="w-full bg-[#7C3AED] hover:bg-[#8B5CF6] text-white font-semibold rounded-xl py-3 shadow-md"
               >
                 <a href="https://tally.so/r/nPW5d1" target="_blank" rel="noopener noreferrer">
                   Activar suscripción
@@ -686,7 +685,7 @@ Si estás activo en una búsqueda, tenés prioridad y soporte dedicado para reso
           <Button 
   size="lg"
   asChild
-  className="bg-[#1C0B35] hover:bg-[#A463F2] text-white rounded-xl px-8 py-4 text-lg font-semibold shadow-lg"
+  className="bg-[#7C3AED] hover:bg-[#8B5CF6] text-white rounded-xl px-8 py-4 text-lg font-semibold shadow-lg"
 >
   <a
     href="https://tally.so/r/nPW5d1"
