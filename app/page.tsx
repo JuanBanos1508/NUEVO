@@ -81,8 +81,8 @@ const maxToPay = useMemo(() => cvCap * PRICE_PER_CV_ARS, [cvCap]);
 </h1>
 
 <p className="text-xl text-[#1C0B35] leading-relaxed">
-  <span>No pierdas tiempo con candidatos que no llevan a nada.</span>
-  <span className="block">Con Work Now encontrás a tus próximos candidatos en minutos</span>
+  <span>Work Now analiza CVs en segundos, entrevista candidatos automáticamente y</span>
+  <span className="block">llevas toda la gestión en un solo lugar</span>
 </p>
               <Button
   size="lg"
@@ -198,11 +198,10 @@ const maxToPay = useMemo(() => cvCap * PRICE_PER_CV_ARS, [cvCap]);
   <div className="container mx-auto px-4 lg:px-6 relative z-10">
     <div className="text-center mb-16">
       <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-        Tu sistema que hace el trabajo pesado por vos
+       Creado para cada etapa de contratación
       </h2>
       <p className="text-xl text-white max-w-3xl mx-auto">
-        Desde que llega el primer CV hasta que tenés a los mejores listos para entrevistar, vos solo decidís a quién contratar.
-      </p>
+Analizamos los CVs con IA según tu criterio para que te queden los mejores candidatos. Vos solo decidís a quién contratar.      </p>
     </div>
 
     <div className="space-y-16">
