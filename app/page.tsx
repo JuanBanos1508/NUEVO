@@ -190,6 +190,7 @@ const maxToPay = useMemo(() => cvCap * PRICE_PER_CV_ARS, [cvCap]);
         </div>
       </section>
 
+      
       {/* How It Works */}
      <section id="how-it-works" className="py-16 lg:py-24 bg-[#1C0B35] relative overflow-hidden">
   <div className="absolute inset-0 bg-white opacity-5 pointer-events-none"></div>
@@ -197,10 +198,11 @@ const maxToPay = useMemo(() => cvCap * PRICE_PER_CV_ARS, [cvCap]);
   <div className="container mx-auto px-4 lg:px-6 relative z-10">
     <div className="text-center mb-16">
       <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-        Creado para cada etapa de tu contratación
+        Tu sistema que hace el trabajo pesado por vos
       </h2>
       <p className="text-xl text-white max-w-3xl mx-auto">
-Analizamos los CVs con IA según tu criterio para que te queden los mejores candidatos. Vos solo decidís a quién contratar.      </p>
+        Desde que llega el primer CV hasta que tenés a los mejores listos para entrevistar, vos solo decidís a quién contratar.
+      </p>
     </div>
 
     <div className="space-y-16">
@@ -274,7 +276,7 @@ Analizamos los CVs con IA según tu criterio para que te queden los mejores cand
     </p>
   </div>
   <video
-    src="/pantalla-solucion-new-3.mp4"
+    src="/pantalla-solucion13.mp4"
     autoPlay
     muted
     playsInline
@@ -285,22 +287,28 @@ Analizamos los CVs con IA según tu criterio para que te queden los mejores cand
   </video>
 </div>
 
-   
 
-</div>
-
-    <div className="text-center mt-12">
-      <Button
-  size="lg"
-  asChild
-  className="bg-[#5B21B6] hover:bg-[#8D3DE5] text-white rounded-xl px-12 py-6 text-xl shadow-lg"
->
-  <a href="https://tally.so/r/nPW5d1" target="_blank" rel="noopener noreferrer">
-    Empezar ahora
-  </a>
-</Button>
-    </div>
+      {/* Paso 5 */}
+    <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-12 mt-16">
+  <div className="lg:w-[55%] text-left bg-white/5 rounded-xl p-6">
+    <h3 className="text-2xl font-bold text-white mb-2">5. Panel de Entrevista</h3>
+    <p className="text-lg text-white">
+      Organizá la documentación y datos del candidato. Toma nota durante la entrevista.
+    </p>
   </div>
+  <video
+    src="/pantalla-solucion-new-5.mp4"
+    autoPlay
+    muted
+    playsInline
+    loop
+    className="rounded-xl lg:w-[45%] w-full shadow-lg"
+  >
+    Tu navegador no soporta video HTML5.
+  </video>
+</div>
+</div>
+</div>
 </section>
 
 {/* Otras Alternativas vs Work Now */}
