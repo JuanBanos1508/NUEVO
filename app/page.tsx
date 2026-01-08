@@ -233,7 +233,7 @@ Analizamos los CVs con IA según tu criterio para que te queden los mejores cand
     </p>
   </div>
   <video
-    src="/pantalla-solucion11.mp4"
+    src="/pantalla-solucion-new-2.mp4"
     autoPlay
     muted
     playsInline
@@ -253,7 +253,7 @@ Analizamos los CVs con IA según tu criterio para que te queden los mejores cand
     </p>
   </div>
   <video
-    src="/pantalla-solucion12.mp4"
+    src="/pantalla-solucion-new-3.mp4"
     autoPlay
     muted
     playsInline
@@ -274,7 +274,7 @@ Analizamos los CVs con IA según tu criterio para que te queden los mejores cand
     </p>
   </div>
   <video
-    src="/pantalla-solucion13.mp4"
+    src="/pantalla-solucion-new-3.mp4"
     autoPlay
     muted
     playsInline
