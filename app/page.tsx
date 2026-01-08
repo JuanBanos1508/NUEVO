@@ -81,8 +81,8 @@ const maxToPay = useMemo(() => cvCap * PRICE_PER_CV_ARS, [cvCap]);
 </h1>
 
 <p className="text-xl text-[#1C0B35] leading-relaxed">
-  <span>Work Now analiza CVs en segundos, entrevista candidatos automáticamente y</span>
-  <span className="block">llevas toda la gestión en un solo lugar</span>
+  <span>Work Now analiza CVs en segundos, preselecciona candidatos, </span>
+  <span className="block">coordinas entrevistas automáticamente y llevas toda la gestión en un solo lugar</span>
 </p>
               <Button
   size="lg"
