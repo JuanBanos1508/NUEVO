@@ -285,26 +285,8 @@ Analizamos los CVs con IA según tu criterio para que te queden los mejores cand
   </video>
 </div>
 
+   
 
-      {/* Paso 5 */}
-    <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-12 mt-16">
-  <div className="lg:w-[55%] text-left bg-white/5 rounded-xl p-6">
-    <h3 className="text-2xl font-bold text-white mb-2">5. Gestión de personal</h3>
-    <p className="text-lg text-white">
-      Organizá la documentación, administrá los pagos y notificás al instante.
-    </p>
-  </div>
-  <video
-    src="/pantalla-solucion14.mp4"
-    autoPlay
-    muted
-    playsInline
-    loop
-    className="rounded-xl lg:w-[45%] w-full shadow-lg"
-  >
-    Tu navegador no soporta video HTML5.
-  </video>
-</div>
 </div>
 
     <div className="text-center mt-12">
